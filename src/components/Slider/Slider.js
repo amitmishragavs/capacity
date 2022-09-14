@@ -2,7 +2,6 @@
 import { Card } from "antd";
 import React, { Component } from "react";
 import Slider from "react-slick";
-import './slider.scss'
 
 const settings = {
     speed: 500,
@@ -12,12 +11,13 @@ const settings = {
 };
 
 const CardT = ({ title, profit, current, total }) => {
+
     return <Card
         className="card-wrapper"
         hoverable
     >
         <h5>{title}</h5>
-        <aside>{profit}</aside>
+        <aside className={profit.includes("-")?"loss":"profit"}>{profit}</aside>
         <aside>{`${current}/${total}`}</aside>
     </Card>
 }
@@ -27,9 +27,9 @@ export function SliderComponent({className}) {
     return (
         <section className={className}>
             <Slider {...settings}>
-                {data.map(c => {
+                {data.map((c,i )=> {
                     console.log(c)
-                    return <CardT {...c} />
+                    return <CardT {...c} index={i} />
                 })}
             </Slider>
         </section>
@@ -44,7 +44,17 @@ const data = [{
     total: 500
 }, {
     title: "Colorectal Surgery",
+    profit: "+2.21%",
+    current: 200,
+    total: 500
+}, {
+    title: "Colorectal Surgery",
     profit: "-2.21%",
+    current: 200,
+    total: 500
+}, {
+    title: "Colorectal Surgery",
+    profit: "+2.21%",
     current: 200,
     total: 500
 }, {
@@ -59,22 +69,7 @@ const data = [{
     total: 500
 }, {
     title: "Colorectal Surgery",
-    profit: "-2.21%",
-    current: 200,
-    total: 500
-}, {
-    title: "Colorectal Surgery",
-    profit: "-2.21%",
-    current: 200,
-    total: 500
-}, {
-    title: "Colorectal Surgery",
-    profit: "-2.21%",
-    current: 200,
-    total: 500
-}, {
-    title: "Colorectal Surgery",
-    profit: "-2.21%",
+    profit: "+2.21%",
     current: 200,
     total: 500
 }, {
