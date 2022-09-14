@@ -1,0 +1,12 @@
+.card-wrapper{
+    width: 15rem !important;
+    border-radius: 10px !important;
+    .ant-card-body{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h5{
+            margin-bottom: 1rem;
+        }
+    }
+}
