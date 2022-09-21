@@ -28,13 +28,6 @@ export const options = {
   plugins: {
     legend: {
       position: 'top',
-      
-      labels: {
-        // This more specific font property overrides the global property
-        font: {
-            size: "16px"
-        }
-    }
     },
     title: {
       display: true,

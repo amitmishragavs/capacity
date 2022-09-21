@@ -1,0 +1,14 @@
+.hospital-module-wrapper {
+    display: flex;
+    gap: 3rem;
+    .list{
+        width: 40vw;
+        cursor: pointer;
+        .ant-list-item-meta{
+            &:hover{
+                background: rgb(255, 255, 255);
+            }
+        }
+        
+    }
+}

@@ -5,7 +5,7 @@ import Slider from "react-slick";
 
 const settings = {
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 4,
     slidesToScroll: 1,
     centerMode: true,
 };
@@ -28,7 +28,7 @@ export function SliderComponent({className}) {
         <section className={className}>
             <Slider {...settings}>
                 {data.map((c,i )=> {
-                    console.log(c)
+                    // console.log(c)
                     return <CardT {...c} index={i} />
                 })}
             </Slider>
