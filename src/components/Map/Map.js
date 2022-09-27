@@ -8,11 +8,11 @@ const containerStyle = {
 };
 
 const center = {
-    lat: 13.067439,
-    lng: 80.237617
+    lat: 40.067439,
+    lng: 73.237617
 };
 
-export const Map = () => {
+export const Map = ({ current = {}, data }) => {
     const location = useCurrentLocation();
 
     return (
@@ -21,11 +21,11 @@ export const Map = () => {
         >
             <GoogleMap
                 mapContainerStyle={containerStyle}
-                center={location}
+                center={{ lat: current.lat, lng: current.long }}
                 zoom={10}
             >
                 { /* Child components, such as markers, info windows, etc. */}
-                {/* <Marker position={{lat,lng}}/> */}
+                <Marker position={{ lat: current.lat, lng: current.long }} />
             </GoogleMap>
         </LoadScript>
     )

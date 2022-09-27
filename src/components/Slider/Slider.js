@@ -17,17 +17,17 @@ const CardT = ({ title, profit, current, total }) => {
         hoverable
     >
         <h5>{title}</h5>
-        <aside className={profit.includes("-")?"loss":"profit"}>{profit}</aside>
+        <aside className={profit.includes("-") ? "loss" : "profit"}>{profit}</aside>
         <aside>{`${current}/${total}`}</aside>
     </Card>
 }
 
-export function SliderComponent({className}) {
-
+export function SliderComponent({ className, sdata }) {
+    console.log(sdata)
     return (
         <section className={className}>
             <Slider {...settings}>
-                {data.map((c,i )=> {
+                {data.map((c, i) => {
                     // console.log(c)
                     return <CardT {...c} index={i} />
                 })}

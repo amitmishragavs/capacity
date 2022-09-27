@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 
 export function useCurrentLocation() {
     const [location, setLocation] = useState({
-        lat: 13.067439,
-        lng: 80.237617
+      lat: 40,
+      lng: -73
     });
 
     useEffect(()=>{
